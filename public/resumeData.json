@@ -1,0 +1,129 @@
+{
+  "main": {
+    "name": "Rudo Mapfumba",
+    "occupation": "ReactJS Developer ",
+    "description": "Freelancer Full Stack React Developer",
+    "image": "maru.png",
+    "bio": "My name is Rudo, I'm a Full Stack ReactJS Developer. Currently I am a Computer Science undergraduate and I do freelancing during my space time",
+    "contactmessage": "Get in touch with me to receive further details.",
+    "email": "rudomaru@gmail.com",
+    "phone": "+86 156 0542 6035",
+    "address": {
+      "street": "238 Songling Road",
+      "city": "Qingdao",
+      "state": "China",
+      "zip": "316000"
+    },
+    "website": "http://www.timbakerdev.com",
+    "resumedownload": "http://timbakerdev.com",
+    "social": [
+      {
+        "name": "facebook",
+        "url": "https://www.facebook.com/rudo.mapfumba",
+        "className": "fa fa-facebook"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/rudo-mapfumba-6023a9167/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "instagram",
+        "url": "https://www.instagram.com/mapfurudo/",
+        "className": "fa fa-instagram"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/maru25-alt",
+        "className": "fa fa-github"
+      },
+      {
+         "name": "twitter",
+         "url": "https://twitter.com/MapfumbaRudo",
+         "className": "fa fa-twitter"
+      }
+    ]
+  },
+  "resume": {
+    "skillmessage": "Here are some of my skills",
+    "education": [
+      {
+        "school": "Ocean University",
+        "degree": "Bachelor degree in Computer Science and Information Technolodge",
+        "graduated": "June 2021 ",
+        "description": "looking forward to graduate next year"
+      }
+    ],
+    "work": [
+      {
+        "company": "Freelancing",
+        "title": "React Developer",
+        "years": "August 2020 - Present",
+        "description": "Build full stack websites."
+      }
+    ],
+    "skills": [
+      {
+        "name": "ReactJs",
+        "level": "95%"
+      },
+      {
+        "name": "CSS and HTML",
+        "level": "95%"
+      },
+      {
+        "name": "Javascript and JQuery",
+        "level": "95%"
+      },
+      {
+        "name": "Vue",
+        "level": "80%"
+      },
+     
+      {
+        "name": "Node and Express",
+        "level": "70%"
+      },
+
+      {
+        "name": "MongoDB and MySql",
+        "level": "60%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Resume Builder",
+        "category": "This is a resume builder which build professional and modern resumes build with ReactJS and Redux",
+        "image": "resumeBuilder.png",
+        "url": "https://resumebuilderz.netlify.app/",
+        "github":"https://github.com/maru25-alt/Resume-Builder"
+      },
+     
+      {
+        "title": "Computer Aid Learning Blog",
+        "category": "Computer Aid Learning Blog App build with ReactJS",
+        "image": "blog_app.png",
+        "url": "https://computeraidlearning.netlify.app/",
+        "github": "https://github.com/maru25-alt/blop-app"
+      },
+      {
+        "title": "Beach Reserve",
+        "category": "Resort Beach is a simple web app built with ReactJS and Contentiful Api",
+        "image": "beach_reserve.png",
+        "url": "https://reservationresort.netlify.app/",
+        "github": "https://github.com/maru25-alt/react-beach.git"
+      }
+    ]
+  },
+  "testimonials": {
+    "testimonials": [
+      {
+        "text": "I loved your work . thanks a lot",
+        "user": "Brendy"
+      }
+      
+    ]
+  }
+}
