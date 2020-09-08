@@ -8,51 +8,103 @@
     "contactmessage": "Get in touch with me to receive further details.",
     "email": "rudomaru@gmail.com",
     "phone": "+86 156 0542 6035",
+    "placeofBirth": "Zimbabwe",
+    "gender": "Female",
+    "DOB": "25-01-1998",
     "address": {
       "street": "238 Songling Road",
       "city": "Qingdao",
       "state": "China",
       "zip": "316000"
     },
-    "website": "http://www.timbakerdev.com",
-    "resumedownload": "http://timbakerdev.com",
+    "website": "https://mapfumbarudo.netlify.app/",
+    "resumedownload": "https://mapfumbarudo.netlify.app/",
     "social": [
       {
         "name": "facebook",
         "url": "https://www.facebook.com/rudo.mapfumba",
-        "className": "fa fa-facebook"
+        "className": "fa fa-facebook",
+        "username": "Rudo Mapfumba"
       },
       {
         "name": "linkedin",
         "url": "https://www.linkedin.com/in/rudo-mapfumba-6023a9167/",
-        "className": "fa fa-linkedin"
+        "className": "fa fa-linkedin",
+        "username": "Rudo Mapfumba"
       },
       {
         "name": "instagram",
         "url": "https://www.instagram.com/mapfurudo/",
-        "className": "fa fa-instagram"
+        "className": "fa fa-instagram",
+        "username": "Rudo Mapfumba"
       },
       {
         "name": "github",
         "url": "https://github.com/maru25-alt",
-        "className": "fa fa-github"
+        "className": "fa fa-github",
+        "username": "Rudo Mapfumba"
       },
       {
          "name": "twitter",
          "url": "https://twitter.com/MapfumbaRudo",
-         "className": "fa fa-twitter"
+         "className": "fa fa-twitter",
+         "username": "Rudo Mapfumba"
       }
     ]
   },
   "resume": {
+    "attributes": ["Good at time management", "Can handle pressure", "I am good at solving problems", "I am a good team player"],
     "skillmessage": "Here are some of my skills",
     "education": [
       {
         "school": "Ocean University",
         "degree": "Bachelor degree in Computer Science and Information Technolodge",
+        "from": "2017",
         "graduated": "June 2021 ",
         "description": "looking forward to graduate next year"
       }
+    ],
+    "objective":"I am a very quite , intelligent and ever smiling girl. I am passinate about creating and building software that can change the world to be a better place. I love creativity and  I am a hardworker and also I am always wanting to learn new things. My hobbies are reading books,playing  chess, listening to podcasts and sleeping ",
+     "experience":[ 
+       {
+         "title": "Junior Developer", 
+         "company": "Zhouzang Ltd",
+        "year_from": "2019",
+        "year_to": "2020",
+        "description": "It was an internship for 2 months. I was working as helping senior web developer on creating a school dashboard application",
+         "id": "2"
+        } 
+      ],
+     "reference":
+            [
+                {"name": "Jeremiah Mapfumba",
+                 "relationship": "father",
+                 "email": "mapfumbaj@gmail.com",
+                "phone": "+26375245305",
+                 "address":"256 Tomazoes Rd Bindura, Harare",
+                "id": 1
+              },
+                {
+                  "name": "Takawira M",
+                  "relationship": "Depty HeadMaster",
+                  "email": "stpauls64@gmail.com",
+                  "phone": "+26372789978",
+                  "address":"St Paul's Musami High School P.O Box CH590 Chisipiti Harare, Zimbabwe"
+                }
+            ],
+   "certifications":
+   [
+         {
+           "title": "Zimbabwe General Certificate of Education At Ordinary Level",
+           "grade": "7As 2Cs", 
+           "year": "2014", 
+           "id": "1"},
+        {
+          "title": "Zimbabwe General Certificate of Education At Ordinary Level",
+          "grade": "15 points",
+          "year": "2016",
+          "id": "2"
+        }
     ],
     "work": [
       {
@@ -89,7 +141,8 @@
         "name": "MongoDB and MySql",
         "level": "60%"
       }
-    ]
+    ],
+    "languages":["Chinese", "English", "Shona"]
   },
   "portfolio": {
     "projects": [
