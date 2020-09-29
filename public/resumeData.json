@@ -147,19 +147,32 @@
   "portfolio": {
     "projects": [
       {
+          "title": "Instagram Clone",
+          "category": "This is a realtime instagram Clone build by react and firebase",
+          "image": "instaClone.png",
+          "url": "https://instagramclone25.netlify.app/",
+          "github": "https://github.com/maru25-alt/instagramClone.git"
+      },
+      {
+        "title": "Netflix Clone",
+        "category": "Netflix Clone app created using react and TMBD api",
+        "image": "netflix.png",
+        "url": "https://netflixclone-25.netlify.app/",
+        "github": "https://github.com/maru25-alt/netflix_Clone.git"
+    },
+    {
+      "title": "Covid 19 Tracker",
+      "category": "This is a Covid 19 world Tracker created by react and disease api",
+      "image": "covid19.png",
+      "url": "https://covid19-tracker-25.netlify.app/",
+      "github": "https://github.com/maru25-alt/Covid-19__tracker.git"
+  },
+      {
         "title": "Resume Builder",
         "category": "This is a resume builder which build professional and modern resumes build with ReactJS and Redux",
         "image": "resumeBuilder.png",
         "url": "https://resumebuilderz.netlify.app/",
         "github":"https://github.com/maru25-alt/Resume-Builder"
-      },
-     
-      {
-        "title": "Computer Aid Learning Blog",
-        "category": "Computer Aid Learning Blog App build with ReactJS",
-        "image": "blog_app.png",
-        "url": "https://computeraidlearning.netlify.app/",
-        "github": "https://github.com/maru25-alt/blop-app"
       },
       {
         "title": "Beach Reserve",
@@ -167,7 +180,15 @@
         "image": "beach_reserve.png",
         "url": "https://reservationresort.netlify.app/",
         "github": "https://github.com/maru25-alt/react-beach.git"
+      },
+      {
+        "title": "Computer Aid Learning Blog",
+        "category": "Computer Aid Learning Blog App build with ReactJS",
+        "image": "blog_app.png",
+        "url": "https://computeraidlearning.netlify.app/",
+        "github": "https://github.com/maru25-alt/blop-app"
       }
+      
     ]
   },
   "testimonials": {
