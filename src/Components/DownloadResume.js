@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import PrintButton from '../extras/PrintButton';
-import ResumePage from '../extras/ResumePage'
+import ResumePage from '../extras/ResumeFinal.js'
 
 export class DownloadResume extends Component {
     constructor(props){

@@ -53,6 +53,7 @@
     ]
   },
   "resume": {
+    "image": "resume.png",
     "attributes": ["Good at time management", "Can handle pressure", "I am good at solving problems", "I am a good team player"],
     "skillmessage": "Here are some of my skills",
     "education": [

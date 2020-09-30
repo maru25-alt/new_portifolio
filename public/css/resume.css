@@ -1,0 +1,13 @@
+.resume{
+    max-height: 50vh;
+    margin-left: 20%;
+ 
+}
+
+.resume img{
+    object-fit: contain;
+    width: 80%;
+}
+
+
+

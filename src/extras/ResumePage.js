@@ -12,7 +12,7 @@ const SinglePage = ({id,resumeData, main, resume }) => {
  return(
    <div>
       {main &&  <Page singleMode={true} id={id}> 
-      <section className="template_container row">
+      <section className="resume row">
                    <div  className="sidebar col-md-4 col-xs-10 offset-xs-2 ">
                        <div className="name_section">
                              <img alt="profile" src={`../../images/${image}`}></img>
