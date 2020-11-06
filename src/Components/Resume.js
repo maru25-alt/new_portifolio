@@ -4,11 +4,11 @@ class Resume extends Component {
   render() {
 
     if(this.props.data){
-      var skillmessage = this.props.data.skillmessage;
       var education = this.props.data.education.map(function(education){
         return <div key={education.school}><h3>{education.school}</h3>
-        <p className="info">{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
-        <p>{education.description}</p></div>
+        <p className="info">{education.degree} </p>
+        <span><em className="date">{education.from} - {education.graduated}</em></span>
+       </div>
       })
       var work = this.props.data.work.map(function(work){
         return <div key={work.company}><h3>{work.company}</h3>
@@ -16,9 +16,15 @@ class Resume extends Component {
             <p>{work.description}</p>
         </div>
       })
-      var skills = this.props.data.skills.map(function(skills){
-        var className = 'bar-expand '+skills.name.toLowerCase();
-        return <li key={skills.name}><span style={{width:skills.level}}className={className}></span><em>{skills.name}</em></li>
+
+      var expectSkills = this.props.data.skills.filter(e => {
+        return  e.level === "expect"
+      })
+      var intermediateSkills = this.props.data.skills.filter(e => {
+        return  e.level === "intermediate"
+      })
+      var basicSkills = this.props.data.skills.filter(e => {
+        return  e.level === "basic"
       })
     }
 
@@ -60,15 +66,30 @@ class Resume extends Component {
          </div>
 
          <div className="nine columns main-col">
-
-            <p>{skillmessage}
-            </p>
-
-				<div className="bars">
-				   <ul className="skills">
-					  {skills}
-					</ul>
-				</div>
+          <div className="bars">
+            <h5>Expect</h5>
+            <ul className="skills">
+              {expectSkills && expectSkills?.map(skill => {
+                return (<li key={skill.name}>{skill.name}</li>)
+              })}
+            </ul>
+          </div>
+          <div className="bars">
+            <h5>Intermediate</h5>
+            <ul className="skills">
+              {intermediateSkills && intermediateSkills?.map(skill => {
+                return (<li key={skill.name}>{skill.name}</li>)
+              })}
+            </ul>
+          </div>
+          <div className="bars">
+            <h5>Intermediate</h5>
+            <ul className="skills">
+              {basicSkills &&  basicSkills?.map(skill => {
+                return (<li key={skill.name}>{skill.name}</li>)
+              })}
+            </ul>
+          </div>
 			</div>
       </div>
    </section>

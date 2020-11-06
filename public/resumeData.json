@@ -2,7 +2,7 @@
   "main": {
     "name": "Rudo Mapfumba",
     "occupation": "ReactJS Developer ",
-    "description": "Freelancer Full Stack React Developer",
+    "description": " Full Stack Web Developer",
     "image": "maru.png",
     "bio": "My name is Rudo, I'm a Full Stack ReactJS Developer. Currently I am a Computer Science undergraduate and I do freelancing during my space time",
     "contactmessage": "Get in touch with me to receive further details.",
@@ -10,6 +10,7 @@
     "phone": "+86 156 0542 6035",
     "placeofBirth": "Zimbabwe",
     "gender": "Female",
+    "portifolioImage": "resume.png",
     "DOB": "25-01-1998",
     "address": {
       "street": "238 Songling Road",
@@ -58,7 +59,7 @@
     "skillmessage": "Here are some of my skills",
     "education": [
       {
-        "school": "Ocean University",
+        "school": "Ocean University of China",
         "degree": "Bachelor degree in Computer Science and Information Technolodge",
         "from": "2017",
         "graduated": "June 2021 ",
@@ -93,60 +94,73 @@
                   "address":"St Paul's Musami High School P.O Box CH590 Chisipiti Harare, Zimbabwe"
                 }
             ],
-   "certifications":
-   [
-         {
-           "title": "Zimbabwe General Certificate of Education At Ordinary Level",
-           "grade": "7As 2Cs", 
-           "year": "2014", 
-           "id": "1"},
-        {
-          "title": "Zimbabwe General Certificate of Education At Ordinary Level",
-          "grade": "15 points",
-          "year": "2016",
-          "id": "2"
-        }
-    ],
     "work": [
       {
         "company": "Freelancing",
         "title": "React Developer",
         "years": "August 2020 - Present",
-        "description": "Build full stack websites."
+        "description": "I have completed many projects in my career and overally client satisfaction is my ultimate goal.",
+        "services": [
+            {
+              "title": "Progrssive Web Apps  ",
+              "description": ""
+            },
+             {
+               "title": "WordPress Websites",
+               "description": ""
+             },
+             {
+              "title": " HTML and CSS Websites",
+              "description": "Photoshop/ Adobe or any Design to HTML and CSS"
+            },
+            {
+              "title": "Modern Responsive Web Designing and Development",
+              "description": ""
+            }
+        ]
       }
     ],
     "skills": [
       {
         "name": "ReactJs",
-        "level": "95%"
+        "level": "expect"
       },
       {
         "name": "CSS and HTML",
-        "level": "95%"
+        "level": "expect"
       },
       {
         "name": "Javascript and JQuery",
-        "level": "95%"
+        "level": "expect"
       },
       {
         "name": "Vue",
-        "level": "80%"
+        "level": "intermediate"
       },
      
       {
         "name": "Node and Express",
-        "level": "70%"
+        "level": "intermediate"
       },
 
       {
         "name": "MongoDB and MySql",
-        "level": "60%"
+        "level": "intermediate"
+      },
+      {
+        "name": "JQuery",
+        "level": "basic"
+      },
+      {
+        "name": "Python",
+        "level": "basic"
       }
+
     ],
     "languages":["Chinese", "English", "Shona"]
   },
   "portfolio": {
-    "projects": [
+    "All": [
       {
           "title": "Instagram Clone",
           "category": "This is a realtime instagram Clone build by react and firebase",
@@ -160,37 +174,58 @@
         "image": "netflix.png",
         "url": "https://netflixclone-25.netlify.app/",
         "github": "https://github.com/maru25-alt/netflix_Clone.git"
+    }
+    ],
+    "React and firebase": [
+      {
+        "title": "Instagram Clone",
+        "category": "This is a realtime instagram Clone created by react and firebase",
+        "image": "instaClone.png",
+        "url": "https://instagramclone25.netlify.app/",
+        "github": "https://github.com/maru25-alt/instagramClone.git"
     },
     {
-      "title": "Covid 19 Tracker",
-      "category": "This is a Covid 19 world Tracker created by react and disease api",
-      "image": "covid19.png",
-      "url": "https://covid19-tracker-25.netlify.app/",
-      "github": "https://github.com/maru25-alt/Covid-19__tracker.git"
-  },
+      "title": "Amazon Clone",
+      "category": "Amazon Clone app created using react and firebase",
+      "image": "amazon.png",
+      "url": "https://netflixclone-25.netlify.app/",
+      "github": "https://github.com/maru25-alt/amazon-clone.git"
+    }
+    ],
+    "Mern Stack": [
       {
-        "title": "Resume Builder",
-        "category": "This is a resume builder which build professional and modern resumes build with ReactJS and Redux",
-        "image": "resumeBuilder.png",
-        "url": "https://resumebuilderz.netlify.app/",
-        "github":"https://github.com/maru25-alt/Resume-Builder"
-      },
-      {
-        "title": "Beach Reserve",
-        "category": "Resort Beach is a simple web app built with ReactJS and Contentiful Api",
-        "image": "beach_reserve.png",
-        "url": "https://reservationresort.netlify.app/",
-        "github": "https://github.com/maru25-alt/react-beach.git"
-      },
-      {
-        "title": "Computer Aid Learning Blog",
-        "category": "Computer Aid Learning Blog App build with ReactJS",
-        "image": "blog_app.png",
-        "url": "https://computeraidlearning.netlify.app/",
-        "github": "https://github.com/maru25-alt/blop-app"
+        "title": "WhatsApp Clone",
+        "category": "WhatsApp Clone App using React, Express , Node , Mongdb and Pusher",
+        "image": "whatsapp.png",
+        "url": "https://clone-ab647.web.app/",
+        "github": "https://github.com/maru25-alt/Whatsapp_Client.git"
       }
-      
+    ],
+    "Wordpress":[
+      {
+        "title": "Cake Bakery Shop",
+        "category": "Wordpress theme using elementor",
+        "image": "wordpress_bakery.png",
+        "url": "https://woopscakes.000webhostapp.com/"
+      }
+    ],
+    "React and APIs": [
+      {
+        "title": "Netflix Clone",
+        "category": "Netflix Clone app created using react and TMBD api",
+        "image": "netflix.png",
+        "url": "https://netflixclone-25.netlify.app/",
+        "github": "https://github.com/maru25-alt/netflix_Clone.git"
+      },
+      {
+        "title": "Covid 19 Tracker",
+        "category": "This is a Covid 19 world Tracker created by react and disease api",
+        "image": "covid19.png",
+        "url": "https://covid19-tracker-25.netlify.app/",
+        "github": "https://github.com/maru25-alt/Covid-19__tracker.git"
+    }
     ]
+    
   },
   "testimonials": {
     "testimonials": [

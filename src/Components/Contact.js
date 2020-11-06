@@ -6,8 +6,6 @@ const Contact = ({ data }) => {
    const [email, setEmail] = useState('');
    const [message, setMessage] = useState('');
 
-   console.log(data)
-
     const handleClick = (e) => {
        e.preventDefault();
        if(name !== "" || subject !== "" || email !== "" || message !== ""){
@@ -16,10 +14,7 @@ const Contact = ({ data }) => {
        else{
           alert("Please fill all the fields in the form")
        }
-      
     }
-    
-
     return (
       <section id="contact">
 
@@ -87,6 +82,7 @@ const Contact = ({ data }) => {
 					   <h4>Address and Phone</h4>
 					   <p className="address">
 						   {data?.name}<br />
+                     {data?.email} <br/>
 						   {data?.address.street} <br />
 						   {data?.address.city}, {data?.address.state} {data?.address.zip}<br />
 						   <span>{data?.phone}</span>
