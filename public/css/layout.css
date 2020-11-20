@@ -199,6 +199,9 @@ ul#nav li a:active {
 ul#nav li.current a {
   color: #f06000;
 }
+.singlePost__nav {
+  background-color: #111;
+}
 
 section {
   padding: 0 5%;
@@ -970,7 +973,6 @@ call-to-action .button {
   padding: 18px 20px;
   color: #eee;
   background: #373233;
-  margin-bottom: 42px;
   border: 0;
   outline: none;
   font-size: 15px;
@@ -1005,7 +1007,6 @@ call-to-action .button {
 }
 #message-warning,
 #message-success {
-  display: none;
   background: #0f0f0f;
   padding: 24px 24px;
   margin-bottom: 36px;
@@ -1140,4 +1141,271 @@ footer .social-links li:first-child {
 }
 #go-top a:hover {
   background-color: #0f9095;
+}
+
+.error {
+  color: #d72828;
+  margin-left: 50%;
+
+  padding-bottom: 1em;
+  transform: translateX(-50%);
+  margin-bottom: 42px;
+}
+
+/***********     Blogs      *****************/
+
+/*******Featured blogs***/
+
+#featured {
+  margin-top: 5em;
+}
+#featured h2 {
+  border-bottom: #0f9095 5px solid;
+  width: max-content;
+  margin-bottom: 2em;
+}
+.featuredBlogs {
+  margin-bottom: 10em;
+  display: flex;
+}
+
+.featured {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: li;
+  background-size: cover;
+  height: 300px;
+  margin-right: 10px;
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+  transition: transform 450ms;
+}
+.featured:hover {
+  text-decoration: none;
+  transform: scale(1.04, 1.02);
+}
+
+.featured h3 {
+  color: #fff;
+  font-size: 2.5em;
+}
+.featured span {
+  color: #212121;
+}
+.featured p {
+  color: #0f9095;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*******Header blogs***/
+
+.blog__header {
+  background-image: linear-gradient(to right, #dddddd, #d72828);
+  height: 60vh;
+  position: relative;
+}
+
+.header {
+  color: #011e31;
+  display: grid;
+  place-items: center;
+  padding-top: 10%;
+}
+
+.blog__header ul {
+  background-color: #0f9095;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.blog__header ul li a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.3em;
+  margin-left: 1.5em;
+}
+
+.blog__header ul li a:hover {
+  text-decoration: none;
+  color: #011e31;
+}
+
+.blog__header ul li a:active {
+  color: #011e31;
+}
+
+/******* blogs Post container***/
+
+.blogPost {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5em;
+  align-items: center;
+}
+.blogPost img {
+  object-fit: contain;
+  width: 30vw;
+}
+.blogPost div {
+  margin: 0 2em;
+}
+.blogPost div h3 {
+  color: #011e31;
+  font-size: 2em;
+}
+
+.blogPost .date {
+  font-style: italic;
+  font-size: larger;
+  color: #00cccc;
+}
+.blogPost p {
+  margin-bottom: 2em;
+}
+
+.btn__link {
+  border: #00cccc 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.btn__link:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #00cccc;
+}
+
+/*******Sidebar***/
+
+#sideBar {
+}
+
+#sideBar .description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.description .profile {
+  width: 150px;
+  height: 150px;
+}
+
+.description h4 {
+  color: #11abb0;
+}
+
+.heading {
+  border-bottom: #11abb0 5px solid;
+  margin-bottom: 1em;
+}
+
+#sideBar .categories {
+  margin-top: 10em;
+}
+
+.category__link a {
+  color: #161415;
+}
+.category__link a:hover {
+  text-decoration: none;
+  color: #0f9095;
+}
+.category__link a span {
+  color: #00cccc;
+}
+
+#sideBar .recentPosts {
+  margin-top: 5em;
+}
+
+.recentPost {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  transition: all 1s;
+}
+
+.recentPost:hover {
+  text-decoration: none;
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+
+.recentPost img {
+  object-fit: contain;
+  width: 100px;
+}
+.recentPost__description {
+  margin-left: 1em;
+}
+
+.footer {
+  background-color: #111;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.commentForm textarea {
+  width: 50vw;
+  color: #000;
+}
+
+.comments {
+  margin-bottom: 10em;
+}
+
+.comments .comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.comment__description {
+  margin-left: 1em;
+}
+
+.category__container {
+  display: flex;
+  margin-top: 10em;
+}
+
+.category__navbar {
+  background-color: #0f9095;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 3em;
+  padding: 2em;
+}
+.category__navbar li a {
+  color: #fff;
+  font-size: 16px;
+  margin-left: 2em;
+}
+.category__title {
+  margin: 0 3em;
+}
+
+.singlePost__container {
+  margin-top: 5em;
 }

@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-class Testimonials extends Component {
-  render() {
-
-    if(this.props.data){
-      var testimonials = this.props.data.testimonials.map(function(testimonials){
-        return  <li key={testimonials.user}>
-            <blockquote>
-               <p>{testimonials.text}</p>
-               <cite>{testimonials.user}</cite>
-            </blockquote>
-         </li>
-      })
-    }
-
-    return (
+function Testimonials({data}) {
+   var testimonials = data?.map(function(testimonial){
+      return  <li key={testimonial.user}>
+          <blockquote>
+             <p>{testimonial.text}</p>
+             <cite>{testimonial.user}</cite>
+          </blockquote>
+       </li>
+    })
+   return (
       <section id="testimonials">
       <div className="text-container">
          <div className="row">
@@ -31,8 +26,9 @@ class Testimonials extends Component {
             </div>
          </div>
    </section>
-    );
-  }
+   )
 }
 
-export default Testimonials;
+export default Testimonials
+
+

@@ -54,6 +54,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
+
 export default function FullWidthTabs({projects}) {
   const classes = useStyles();
   const theme = useTheme();
@@ -67,10 +69,28 @@ export default function FullWidthTabs({projects}) {
     setValue(index);
   };
 
-//   console.log(projects)
+  const getUnique = (items, value) => {
+    return [...new Set(items?.map(item => item[value]))]
+}
+
+const getProjects = (projects  , value , find="all") => {
+   if(value === find){
+     return projects
+   }
+   else{
+     return  projects?.filter(res => res.categoryName === value)
+   }
+}
+
+let projectsTabs = getUnique(projects, "categoryName")
+projectsTabs = ["all", ...projectsTabs]
+
+
+
+
 
   return (
-    <div className={classes.root}>
+    <section className={classes.root} id="portfolio">
       <AppBar className={classes.nav} position="static"  >
         <Tabs
           value={value}
@@ -80,12 +100,9 @@ export default function FullWidthTabs({projects}) {
           variant="fullWidth"
           aria-label="full width tabs example"
         >
-            {projects && Object.keys(projects)?.map((project, index) => {
+            {projectsTabs && projectsTabs?.map((project, index) => {
                 return ( <Tab key={index} label={project} {...a11yProps(index)} />)
             })}
-          {/* <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} /> */}
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -93,51 +110,37 @@ export default function FullWidthTabs({projects}) {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-         
-          {projects && Object.keys(projects)?.map((project, index) => {
-               
-              return (
-                <TabPanel value={value} index={index} key={index} dir={theme.direction}>
-                  <div  id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
-                    {projects[project].map((e, i) => {
-                          var projectImage = 'images/portfolio/'+e.image;
-                       return(
-                        <div key={i} className="columns portfolio-item">
-                        <div className="item-wrap">
-                        <div title={e.title}>
-                           <img alt={e.title} src={projectImage} />
-                           <div className="overlay">
-                               <div className="portfolio-item-meta">
-                               <h5>{e.title}</h5>
-                               <p>{e.category}</p>
-                            </div>
-                            </div>
-                            <div className="links__container">
-                               <a className="link-icon" href={e.github}> <i className="fa fa-github" ></i> Github </a>
-                               <a href={e.url} className="link-icon"><i className="fa fa-link">View</i></a>
-                            </div>
-                         </div>
-                        </div>
-                      </div>
-                       )
-                    })}
-                  </div>
-              </TabPanel>
-            )}
-
+        {projectsTabs && projectsTabs?.map((project , index) => 
+          <TabPanel value={value} index={index} key={index} dir={theme.direction}>
+            <div  id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
+               {getProjects(projects ,project)
+                ?.map((e , i) => {
+                  var projectImage = 'images/portfolio/'+e.image;
+                  return(
+                   <div key={i} className="columns portfolio-item">
+                   <div className="item-wrap">
+                   <div title={e.title}>
+                      <img alt={e.title} src={projectImage} />
+                      <div className="overlay">
+                          <div className="portfolio-item-meta">
+                            <h5>{e.title}</h5>
+                            <p>{e.category}</p>
+                           </div>
+                       </div>
+                       <div className="links__container">
+                          <a className="link-icon" href={e.github}> <i className="fa fa-github" ></i> Github </a>
+                          <a href={e.url} className="link-icon"><i className="fa fa-link">View</i></a>
+                       </div>
+                    </div>
+                   </div>
+                 </div>
+                  )
+                })
+                }
+               </div>
+            </TabPanel> 
         )}
-        {/* <TabPanel value={value} index={0} dir={theme.direction}>
-          Item One 
-          <div>Hello</div>
-        </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
-        </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
-        </TabPanel> */}
-       
       </SwipeableViews>
-    </div>
+    </section>
   );
 }

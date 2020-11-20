@@ -1,53 +1,48 @@
-import React, { Component } from 'react'
 import PrintButton from './DownloadResumeButton';
-export class About extends Component {
-   render() {
-      if(this.props.data){
-         var profilepic= "images/"+this.props.data.image;
-         var bio = this.props.data.bio;
-         var street = this.props.data.address.street;
-         var city = this.props.data.address.city;
-         var state = this.props.data.address.state;
-         var zip = this.props.data.address.zip;
-         var phone= this.props.data.phone;
-         var email = this.props.data.email;
-         var resumeImage = this.props.data.portifolioImage
-       }
-       console.log(resumeImage)
-      return (
-         <section id="about">
-         <div className="row">
-            <div className="three columns">
-               <img className="profile-pic"  src={profilepic} alt="Tim Baker Profile Pic" />
-            </div>
-            <div className="nine columns main-col">
-               <h2>About Me</h2>
-   
-               <p>{bio}</p>
-               <div className="row">
-                  <div className="columns contact-details">
-                     <h2>Contact Details</h2>
-                     <p className="address">
-                        <span>Address:</span><span>{street}<br />
-                              {city} {state}, {zip}
-                      </span><br />
-                        <span> Telephone: {phone}</span><br />
-                        <span>Email: {email}</span>
-                     </p>
-                  </div>
-                  <div className="columns download">
-                     <p>
-                        <PrintButton resumeImage={resumeImage}/>
-                        <a href='/downloadResume' className="button"><i className="fa fa-download"></i>Download Resume</a>
-                     </p>
-                  </div>
+import React from 'react';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import options from '../utils/RichText'
+
+function About({aboutMe, contact, address, profile, resume}) {
+   let street = address?.street;
+   let city = address?.city;
+   let state = address?.state;
+   let zip = address?.zip;
+   let phone= contact?.phone;
+   let email = contact?.email;
+   return (
+      <section id="about">
+      <div className="row">
+         <div className="three columns">
+            <img className="profile-pic"   src={profile?.fields.file.url}  alt="Tim Baker Profile Pic" />
+         </div>
+         <div className="nine columns main-col">
+            <h2>About Me</h2>
+            <p> {documentToReactComponents(aboutMe, options)}</p>
+            {/* <p>{aboutMe}</p> */}
+            <div className="row">
+               <div className="columns contact-details">
+                  <h2>Contact Details</h2>
+                  <p className="address">
+                     <span>Address:</span><span>{street}<br />
+                           {city} {state}, {zip}
+                   </span><br />
+                     <span> Telephone: {phone}</span><br />
+                     <span>Email: {email}</span>
+                  </p>
+               </div>
+               <div className="columns download">
+                  <p>
+                     <PrintButton resumeImage={resume?.fields.file.url}/>
+                     
+                  </p>
                </div>
             </div>
          </div>
-   
-      </section>
-      )
-   }
+      </div>
+
+   </section>
+   )
 }
 
 export default About

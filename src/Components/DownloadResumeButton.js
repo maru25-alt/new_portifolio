@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Button} from '@material-ui/core';
 import image from '../resume.png'
 import jsPDF from 'jspdf'
 
@@ -39,7 +38,7 @@ export default class pdfGenerate extends Component {
   
     render(){
       return(
-         <Button  className="button" onClick={this.jsPdfGenerator} type="primary"><i className="fa fa-download"></i> Download Resume </Button> 
+         <button  className="button" onClick={this.jsPdfGenerator} type="primary"><i className="fa fa-download"></i> Download Resume </button> 
         )
      }
   

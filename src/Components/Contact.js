@@ -1,19 +1,35 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import { useForm } from "react-hook-form";
+import LoadingGif from '../images/loader.gif'
 
-const Contact = ({ data }) => {
+const Contact = ({contact, address,  myName }) => {
    const [name, setName] = useState('');
    const [subject, setSubject] = useState('');
    const [email, setEmail] = useState('');
    const [message, setMessage] = useState('');
+   const { register, handleSubmit, errors } = useForm();
+   const [loading, setloading] = useState(false)
+   const [showSentMessage, setshowSentMessage] = useState(false)
 
-    const handleClick = (e) => {
-       e.preventDefault();
-       if(name !== "" || subject !== "" || email !== "" || message !== ""){
-         window.open(`mailto:${email}?subject=${subject}&body=${name}: ${message}`);
-       }
-       else{
-          alert("Please fill all the fields in the form")
-       }
+    const handleClick = () => {
+         // window.open(`mailto:${email}?subject=${subject}&body=${name}: ${message}`);
+         setloading(true)
+         emailjs.sendForm('gmail', 'contact', "#contactForm", 'user_MKMbkoKCK0PNJYbeaCWRm')
+            .then((result) => {
+               loading(false)
+                console.log(result.text);
+                alert("Successfully send message")
+                setshowSentMessage(true)
+            }, (error) => {
+                console.log(error.text);
+                loading(false)
+                alert(error.text)
+            });
+            setName("");
+            setSubject("");
+            setEmail("");
+            setMessage("");
     }
     return (
       <section id="contact">
@@ -28,7 +44,7 @@ const Contact = ({ data }) => {
 
             <div className="ten columns">
 
-                  <p className="lead">{data?.message}</p>
+                  <p className="lead">Get in touch with me to receive further details.</p>
 
             </div>
 
@@ -36,43 +52,44 @@ const Contact = ({ data }) => {
 
          <div className="row">
             <div className="eight columns">
-
-               <form id="contactForm" name="contactForm">
+               <form id="contactForm"  onSubmit={handleSubmit(handleClick)}>
 					<fieldset>
-
                   <div>
 						   <label htmlFor="contactName">Name <span className="required">*</span></label>
-						   <input value={name} type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={e => setName(e.target.value)}/>
+						   <input ref={register({ required: true })} value={name} type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={e => setName(e.target.value)}/>
+                     {errors.contactName && <span className="error">This field is required</span>}
                   </div>
 
                   <div>
 						   <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-						   <input value={email} type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={e=> setEmail(e.target.value)}/>
+						   <input ref={register({ required: true })} value={email} type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={e=> setEmail(e.target.value)}/>
+                     {errors.contactEmail && <span className="error">This field is required</span>}
                   </div>
 
                   <div>
 						   <label htmlFor="contactSubject">Subject</label>
-						   <input value={subject} type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={e => setSubject(e.target.value)}/>
+						   <input ref={register({ required: true })} value={subject} type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={e => setSubject(e.target.value)}/>
+                     {errors.contactSubject && <span  size="35" className="error">This field is required</span>}
                   </div>
 
                   <div>
                      <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                     <textarea value={message} onChange={e => setMessage(e.target.value)} cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                     <textarea ref={register({ required: true })} value={message} onChange={e => setMessage(e.target.value)} cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                     {errors.contactMessage && <span className="error">This field is required</span>}
                   </div>
 
                   <div>
-                     <button type='submit' onClick={handleClick} className="submit">Submit</button>
-                     <span id="image-loader">
-                        <img alt="" src="images/loader.gif" />
-                     </span>
+                     <button type='submit' className="submit">Submit</button>
+                     {loading &&   <img alt="" src={LoadingGif} />}
                   </div>
 					</fieldset>
 				   </form>
-
-           <div id="message-warning"> Error boy</div>
-				   <div id="message-success">
+         
+           {showSentMessage &&  <div id="message-success">
                   <i className="fa fa-check"></i>Your message was sent, thank you!<br />
-				   </div>
+				   </div> 
+            }
+				  
            </div>
 
 
@@ -81,11 +98,11 @@ const Contact = ({ data }) => {
 
 					   <h4>Address and Phone</h4>
 					   <p className="address">
-						   {data?.name}<br />
-                     {data?.email} <br/>
-						   {data?.address.street} <br />
-						   {data?.address.city}, {data?.address.state} {data?.address.zip}<br />
-						   <span>{data?.phone}</span>
+						   {myName}<br />
+                     {contact?.email} <br/>
+						   {address?.street} <br />
+						   {address?.city}, {address?.state} {address?.zip}<br />
+						   <span>{contact?.phone}</span>
 					   </p>
 				   </div>
 

@@ -120,7 +120,8 @@
         ]
       }
     ],
-    "skills": [
+    "skills": 
+    [
       {
         "name": "ReactJs",
         "level": "expect"
@@ -215,7 +216,7 @@
       "title": "Amazon Clone",
       "category": "Amazon Clone app created using react and firebase",
       "image": "amazon.png",
-      "url": "https://netflixclone-25.netlify.app/",
+      "url": "https://clone-ab647.web.app/",
       "github": "https://github.com/maru25-alt/amazon-clone.git"
     }
     ],
@@ -264,3 +265,10 @@
     ]
   }
 }
+
+
+
+
+
+
+
